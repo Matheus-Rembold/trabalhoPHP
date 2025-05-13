@@ -8,7 +8,7 @@ class carro extends Model
 {
     
         protected $table = 'carros';
-        protected $fillable = ['id','clientes_id','Placa','Marca','Modelo','Ano','Motor'];
+        protected $fillable = ['clientes_id','Placa','Marca','Modelo','Ano','Motor'];
     
     
 }

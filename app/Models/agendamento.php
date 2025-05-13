@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class agendamento extends Model
 {
     protected $table = 'carros';
-    protected $fillable = ['id','servicos_id','Dia_do_servico','Tempo_para_aprontar'];
+    protected $fillable = ['servicos_id','Dia_do_servico','Tempo_para_aprontar'];
 
 }
