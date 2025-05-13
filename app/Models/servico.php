@@ -8,6 +8,6 @@ class servico extends Model
 {
     
         protected $table = 'servicos';
-        protected $fillable = ['id','Descricao','Elevacar'];
+        protected $fillable = ['Descricao','Elevacar','Meacnicos_id','Carros_id'];
     
 }
