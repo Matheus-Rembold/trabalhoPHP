@@ -46,9 +46,12 @@ class ClienteController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show( $id)
     {
-        //
+        
+        $cliente = Cliente::findOrFail($id);
+        return view('clientes.show', ['cliente' => $cliente]);
+        
     }
 
     /**
@@ -56,15 +59,30 @@ class ClienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+        return view('clientes.edit', compact('cliente'));
     }
+    
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, string $id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+        $data = $request->validate([
+            'Nome'      => 'required|string|max:255',
+            'Telefone' => 'nullable|string',
+            'CFP'  =>  'nullable|string',
+            'Endereco' => 'nullable|string'
+        ]);
+
+        $cliente->update($data);
+
+
+        return redirect()
+            ->route('clientes.index')
+            ->with('success', 'Cliente atualizado com sucesso!');
     }
 
     /**
@@ -72,6 +90,15 @@ class ClienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $cliente = Cliente::findOrFail($id);
+        
+      
+
+        $cliente->delete();
+
+        return redirect()
+            ->route('clientes.index')
+            ->with('success', 'Cliente excluído com sucesso!');
+
     }
 }
