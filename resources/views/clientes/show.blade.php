@@ -1,24 +1,31 @@
 <x-layouts.app>
-  <div>
+
+<head>
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+
+
+  <div class="container">
     <h1>{{ $cliente->Nome }}</h1>
 
     @if($cliente->Telefone)
-      <p>{{ $cliente->Telefone }}</p>
+      
+      <p>TELEFONE:  {{ $cliente->Telefone }}</p>
     @endif
 
     @if($cliente->CPF)
-      <p>{{ $cliente->CPF }}</p>
+      <p>CPF:  {{ $cliente->CPF }}</p>
     @endif
 
 
     @if($cliente->Endereco)
-      <p>{{ $cliente->Endereco }}</p>
+      <p>ENDEREÇO:  {{ $cliente->Endereco }}</p>
     @endif
 
 
-    <div>
-      <a href="{{ route('clientes.create') }}">Novo Cliente</a>
-      <a href="{{ url()->previous() }}">Voltar</a>
+    <div class="form-actions">
+      <a href="{{ route('clientes.create') }}" class="btn">Novo Cliente</a>
+      <a href="{{ route('clientes.index')}}"class="cancelar">Voltar</a>
     </div>
   </div>
 </x-layouts.app>

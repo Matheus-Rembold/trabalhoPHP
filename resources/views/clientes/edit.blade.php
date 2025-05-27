@@ -1,5 +1,10 @@
 <x-layouts.app :title="__('Editar Cliente')" :dark-mode="auth()->user()->pref_dark_mode">
-  <div>
+
+<head>
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+
+  <div class="container">
     <h1>Editar Clientes</h1>
 
     <form action="{{ route('clientes.update', $cliente) }}" method="POST">
@@ -50,8 +55,14 @@
 
 
       <div style="margin-top:1em;">
-        <button type="submit" >Atualizar</button>
-        <a href="{{ route('clientes.index', $cliente) }}">Cancelar</a>
+        <button type="button" 
+        class = "atualizar"
+        >Atualizar</button>
+
+      
+        <a href="{{ route('clientes.index', $cliente) }}" class="cancelar">Cancelar</a>
+
+
       </div>
     </form>
   </div>

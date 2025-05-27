@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<x-layouts.app :title="__('Editar Cliente')" :dark-mode="auth()->user()->pref_dark_mode">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
-</head>
-<body>
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
     
 <div class= "container">
 <H1>NOVO CLIENTE </H1>
@@ -13,8 +10,6 @@
 
 <form action="{{route('clientes.store')}}" method = "POST">
     @csrf 
-
-
 
 <div class="form_group">
 <label for="Nome">Nome:</label>
@@ -37,8 +32,8 @@
 <input type="text" name ="Endereco">
 </div>
 
-<button type = "submit" calss ="bnt ">Salvar</button>
-<a href="{{route('clientes.index')}}" class = "bnt"> Cancelar</a>
+<button type ="button"class="salvar">Salvar</button>
+<a href="{{route('clientes.index')}}" class = "cancelar"> Cancelar</a>
 
     
 
@@ -48,6 +43,4 @@
 
 </div>
 
-
-</body>
-</html>
+</x-layouts.app>

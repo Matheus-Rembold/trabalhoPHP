@@ -1,14 +1,18 @@
 <x-layouts.app :title="__('Meus clientes')">
-  <div>
-    <div>
-      <h1>Meus clientes</h1>
-      <a href="{{ route('clientes.create') }}">+ Novo Cliente </a>
+<head>
+      <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    </head>
+
+  <div class="container">
+    <div class = "header">
+      <h1>Meus Clientes</h1>
+      <a href="{{ route('clientes.create') }}" class="novo">+ Novo Cliente </a>
     </div>
 
     @if($clientes->isEmpty())
       <p>Nenhum cliente cadastrado.</p>
     @else
-      <table  cellpadding="8" cellspacing="0">
+      <table  class="table">
         <thead>
           <tr>
             <th>Nome</th>
@@ -28,14 +32,19 @@
               <td>{{ $cliente->CPF }}</td>
               <td>{{ $cliente->Endereco }}</td>
               <td>
-                <a href="{{ route('clientes.show', $cliente) }}">Ver</a>
+                <a href="{{ route('clientes.show', $cliente) }}" class="link blue">Ver</a>
                 |
-                <a href="{{ route('clientes.edit', $cliente) }}">Editar</a>
+                <a href="{{ route('clientes.edit', $cliente) }}" class="link blue">Editar</a>
                 |
-                <form action="{{ route('clientes.destroy', $cliente) }}" method="POST" style="display:inline" onsubmit="return confirm('Tem certeza que deseja excluir este cliente?')">
+                <form action="{{ route('clientes.destroy', $cliente) }}" method="POST" style="display:inline" >
                   @csrf
                   @method('DELETE')
-                  <button type="submit">Excluir</button>
+                  <button
+                    type="button"
+                    class="btn-excluir link red"
+                    data-nome="{{ $cliente->Nome }}">
+                    Excluir
+                    </button>
                 </form>
               </td>
             </tr>
