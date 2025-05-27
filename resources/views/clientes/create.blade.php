@@ -34,12 +34,7 @@
 
 <button type ="button"class="salvar">Salvar</button>
 <a href="{{route('clientes.index')}}" class = "cancelar"> Cancelar</a>
-
-    
-
 </form>
-
-
 
 </div>
 
