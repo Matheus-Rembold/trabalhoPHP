@@ -31,7 +31,6 @@ document.querySelectorAll('.btn-excluir').forEach(button => {
 document.querySelectorAll('.atualizar').forEach(button => {
     button.addEventListener('click', function() {
       const form = this.closest('form');
-      const nome = this.dataset.nome;
       Swal.fire({
         title: "Atualizado!",
         icon: "success",
@@ -47,7 +46,6 @@ document.querySelectorAll('.atualizar').forEach(button => {
   document.querySelectorAll('.salvar').forEach(button => {
     button.addEventListener('click', function() {
       const form = this.closest('form');
-      const nome = this.dataset.nome;
       Swal.fire({
         title: "Salvo!",
         icon: "success",

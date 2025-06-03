@@ -19,6 +19,7 @@
           name="Nome"
           id="Nome"
           rows="4"
+        
         >{{ old('Nome', $cliente->Nome) }}</textarea>
       </div>
 
@@ -55,8 +56,8 @@
 
 
       <div style="margin-top:1em;">
-        <button type="button" 
-        class = "atualizar"
+        <button type="submit" 
+       
         >Atualizar</button>
 
       

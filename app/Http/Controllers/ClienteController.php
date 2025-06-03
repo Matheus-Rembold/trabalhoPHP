@@ -32,13 +32,14 @@ class ClienteController extends Controller
      */
     public function store(Request $request)
     {
-        $cliente = new cliente([
-            'Nome'=>$request-> input('Nome'),
-            'Telefone'=>$request-> input('Telefone'),
-            'CPF' =>$request-> input('CPF'),
-            'Endereco'=> $request->input('Endereco')
+        $data = $request->validate([
+            'Nome'               =>'required|string|max:255',
+            'Telefone'           =>'required|string|max:255',
+            'CPF'                =>'required|string|max:255',
+            'Endereco'           =>'required|string|max:255',
         ]);
-        $cliente ->save();
+      
+        $cliente = Cliente::create($data);
 
         return redirect()->route('clientes.index');
     }
@@ -70,11 +71,12 @@ class ClienteController extends Controller
     public function update(Request $request, string $id)
     {
         $cliente = Cliente::findOrFail($id);
+
         $data = $request->validate([
             'Nome'      => 'required|string|max:255',
-            'Telefone' => 'nullable|string',
-            'CFP'  =>  'nullable|string',
-            'Endereco' => 'nullable|string'
+            'Telefone' =>  'required|string|max:255',
+            'CFP'  =>   'required|string|max:255',
+            'Endereco' =>  'required|string|max:255'
         ]);
 
         $cliente->update($data);
