@@ -5,10 +5,10 @@ use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClienteController;
-//use App\Http\Controller\CarroController;
-//use App\Http\Controller\MecancioController;
-//use App\Http\Controller\ServicoController;
-//use App\Http\Controller\AgendametoController;
+use App\Http\Controllers\CarroController;
+use App\Http\Controllers\MecanicoController;
+use App\Http\Controllers\ServicoController;
+use App\Http\Controllers\AgendametoController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,9 +33,9 @@ Route::middleware(['auth'])->group(function () {
 });
 
 Route::resource('clientes',ClienteController::class);
-//Route::resource('carros',CarroController::class  );
-//Route::resource('mecanicos',MecanicoController::class  );
-//Route::resource('servicos',ServicoController::class  );
-//Route::resource('agendamentos',AgendamentoController::class  );
+Route::resource('carros',CarroController::class);
+Route::resource('mecanicos',MecanicoController::class);
+Route::resource('servicos',ServicoController::class);
+Route::resource('agendamentos',AgendamentoController::class);
 
 require __DIR__.'/auth.php';
