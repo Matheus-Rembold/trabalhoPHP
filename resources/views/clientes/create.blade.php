@@ -1,5 +1,7 @@
 
-<x-layouts.app :title="__('Editar Cliente')" :dark-mode="auth()->user()->pref_dark_mode">
+<x-layouts.app 
+    :title="__('Editar Cliente')" 
+    :dark-mode="auth()->check() ? auth()->user()->pref_dark_mode : false">
 
 <head>
       <link rel="stylesheet" href="{{ asset('css/app.css') }}">

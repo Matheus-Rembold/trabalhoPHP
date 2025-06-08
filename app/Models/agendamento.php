@@ -4,9 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class agendamento extends Model
+class Agendamento extends Model
 {
-    protected $table = 'carros';
-    protected $fillable = ['servicos_id','Dia_do_servico','Tempo_para_aprontar'];
+    protected $table = 'agendamentos';
+    protected $fillable = ['servicos_id','mecanicos_id','carros_id','Dia_do_servico','Tempo_para_aprontar'];
 
 }

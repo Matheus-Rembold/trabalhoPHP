@@ -19,7 +19,7 @@
           name="Nome"
           id="Nome"
           rows="4"
-        
+        required
         >{{ old('Nome', $cliente->Nome) }}</textarea>
       </div>
 
@@ -30,6 +30,7 @@
           name="Telefone"
           id="Telefone"
           rows="4"
+          required
         >{{ old('Telefone', $cliente->Telefone) }}</textarea>
       </div>
 
@@ -39,6 +40,7 @@
           name="CPF"
           id="CPF"
           rows="4"
+          required
         >{{ old('CPF', $cliente->CPF) }}</textarea>
       </div>
 
@@ -49,6 +51,7 @@
           name="Endereco"
           id="Endereco"
           rows="4"
+          required
         >{{ old('Endereco', $cliente->Endereco) }}</textarea>
       </div>
 
@@ -56,11 +59,8 @@
 
 
       <div style="margin-top:1em;">
-        <button type="submit" 
-       
-        >Atualizar</button>
+        <button type="submit" >Atualizar</button>
 
-      
         <a href="{{ route('clientes.index', $cliente) }}" class="cancelar">Cancelar</a>
 
 

@@ -17,13 +17,14 @@
           name="Nome"
           id="Nome"
           rows="4"
+          required
         >{{ old('Nome', $mecanico->Nome) }}</textarea>
       </div>
 
 
       <div style="margin-top:1em;">
-        <button type="button" 
-        class = "atualizar"
+        <button type="submit" 
+       
         >Atualizar</button>
 
       

@@ -6,17 +6,17 @@
 
 
   <div class="container">
-    <h1>{{ $cliente->Nome }}</h1>
+    <h1>{{ $mecanico->Nome }}</h1>
    
     @if($mecanico->id)
-      <p>ID:  {{ $mecanicos->id }}</p>
+      <p>ID:  {{ $mecanico->id }}</p>
     @endif
 
 
 
     <div class="form-actions">
-      <a href="{{ route('clientes.create') }}" class="btn">Novo Cliente</a>
-      <a href="{{ route('clientes.index')}}"class="cancelar">Voltar</a>
+      <a href="{{ route('mecanicos.create') }}" class="btn">Novo Mecanico</a>
+      <a href="{{ route('mecanicos.index')}}"class="cancelar">Voltar</a>
     </div>
   </div>
 </x-layouts.app>

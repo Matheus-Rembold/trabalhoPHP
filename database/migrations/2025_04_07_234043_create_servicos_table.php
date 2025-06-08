@@ -13,14 +13,9 @@ return new class extends Migration
     {
         Schema::create('servicos', function (Blueprint $table) {
             $table->id();
+            $table-> string( 'Nome',300);
             $table-> string('Descricao',300);
             $table-> integer('Elevacar');
-            $table->unsignedBigInteger('Meacnicos_id');
-            $table->unsignedBigInteger('Carros_id');
-            $table-> foreign('mecanicos_id')->references('id')->on('mecanicos') ->onDelete('cascade');
-            $table-> foreign('carros_id')->references('id')->on('carros') ->onDelete('cascade');
-
-            
             $table->timestamps();
         });
     }

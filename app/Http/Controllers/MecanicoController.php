@@ -24,7 +24,7 @@ class MecanicoController extends Controller
      */
     public function create()
     {
-        //
+        return view('mecanicos.create') ;
     }
 
     /**
@@ -32,7 +32,13 @@ class MecanicoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         $data = $request->validate([
+            'Nome'               =>'required|string|max:255'
+        ]);
+      
+        $mecanico = Mecanico::create($data);
+
+        return redirect()->route('mecanicos.index');
     }
 
     /**
@@ -40,7 +46,8 @@ class MecanicoController extends Controller
      */
     public function show(string $id)
     {
-        //
+         $mecanico = Mecanico::findOrFail($id);
+        return view('mecanicos.show', ['mecanico' => $mecanico]);
     }
 
     /**
@@ -48,7 +55,8 @@ class MecanicoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+         $mecanico = Mecanico::findOrFail($id);
+        return view('mecanicos.edit', compact('mecanico'));
     }
 
     /**
@@ -56,7 +64,18 @@ class MecanicoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+         $mecanico = Mecanico::findOrFail($id);
+
+        $data = $request->validate([ 
+            'Nome'      => 'required|string|max:255'
+        
+        ]);
+
+        $mecanico->update($data);
+
+         return redirect()
+            ->route('mecanicos.index')
+            ->with('success', 'Mecanico atualizado com sucesso!');
     }
 
     /**
@@ -64,6 +83,15 @@ class MecanicoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $mecanico = Mecanico::findOrFail($id);
+        
+      
+
+        $mecanico->delete();
+
+        return redirect()
+            ->route('mecanicos.index')
+            ->with('success', 'Mecanico excluído com sucesso!');
+
     }
 }

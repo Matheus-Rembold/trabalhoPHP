@@ -8,6 +8,11 @@
   <div class="container">
     <h1>{{ $cliente->Nome }}</h1>
 
+    @if($cliente->id)
+      
+      <p>ID:  {{ $cliente->id }}</p>
+    @endif
+
     @if($cliente->Telefone)
       
       <p>TELEFONE:  {{ $cliente->Telefone }}</p>

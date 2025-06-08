@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Fadaces\Auth;
 use App\Models\Cliente;
 
-class ClienteController extends Controller
+class ClienteController extends Controller 
 {
     /**
      * Display a listing of the resource.
@@ -72,7 +72,7 @@ class ClienteController extends Controller
     {
         $cliente = Cliente::findOrFail($id);
 
-        $data = $request->validate([
+        $data = $request->validate([ 
             'Nome'      => 'required|string|max:255',
             'Telefone' =>  'required|string|max:255',
             'CFP'  =>   'required|string|max:255',

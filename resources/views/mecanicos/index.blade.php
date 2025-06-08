@@ -1,4 +1,5 @@
 <x-layouts.app :title="__('Meus clientes')">
+  <body>
 <head>
       <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
@@ -19,7 +20,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach($mecanicos as $mecancio)
+          @foreach($mecanicos as $mecanico)
             <tr>
               <td>{{ $mecanico->Nome }}</td>
               <td>
@@ -44,4 +45,5 @@
       </table>
     @endif
   </div>
+   </body>
 </x-layouts.app>

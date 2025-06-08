@@ -1,4 +1,5 @@
-<x-layouts.app :title="__('Novo Mecanico')" :dark-mode="auth()->user()->pref_dark_mode">
+
+<x-layouts.app :title="__('Novo Mecanico')" :dark-mode="auth()->check() ? auth()->user()->pref_dark_mode : false">
 
 <head>
       <link rel="stylesheet" href="{{ asset('css/app.css') }}">
@@ -12,11 +13,11 @@
     @csrf 
 
 <div class="form_group">
-<label for="Nome">Nome:</label>
-<input type="text" name ="Nome">
+    <label for="Nome">Nome:</label>
+    <input type="text" name ="Nome" required>
 </div>
 
-<button type ="button"class="salvar">Salvar</button>
+<button type ="submit">Salvar</button>
 <a href="{{route('mecanicos.index')}}" class = "cancelar"> Cancelar</a>
 </form>
 
