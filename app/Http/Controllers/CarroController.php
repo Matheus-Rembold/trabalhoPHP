@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Carro;
 use Illuminate\Http\Request;
+use App\Models\Cliente;
 
 class CarroController extends Controller
 {
@@ -22,7 +23,8 @@ class CarroController extends Controller
      */
     public function create()
     {
-       return view(view: 'carros.create') ;
+        $clientes = Cliente::all();
+        return view('carros.create', compact('clientes'));
     }
 
     /**
@@ -33,11 +35,11 @@ class CarroController extends Controller
           
 
        $data = $request->validate([
-            'clientes_id'               =>'required|string|max:255|exists:clientes,id',
+            'clientes_id'     =>'required|string|max:255|exists:clientes,id',
             'Placa'           =>'required|string|max:255',
-            'Marca'                =>'required|string|max:255',
-            'Modelo'           =>'required|string|max:255',
-            'Ano'           =>'required|string|max:255',
+            'Marca'           =>'required|string|max:255',
+            'Modelo'          =>'required|string|max:255',
+            'Ano'             =>'required|string|max:255',
             'Motor'           =>'required|string|max:255',
         ]);
       

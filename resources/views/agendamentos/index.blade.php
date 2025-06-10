@@ -26,7 +26,7 @@
         <tbody>
           @foreach($agendamentos as $agendamento)
             <tr>
-              <td>{{ $agendamento->servicos_id }}</td>
+              <td>{{  $agendamento->servicos_id }}</td>
               <td>{{$agendamento->mecanicos_id }}</td>
               <td>{{ $agendamento->carros_id }}</td>
               <td>{{ $agendamento->Dia_do_servico }}</td>

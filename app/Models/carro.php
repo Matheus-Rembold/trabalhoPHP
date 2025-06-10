@@ -9,7 +9,13 @@ class Carro extends Model
     
         protected $table = 'carros';
         protected $fillable = ['clientes_id','Placa','Marca','Modelo','Ano','Motor'];
-    
+
+
+        public function cliente()
+        {
+            return $this->belongsTo(Cliente::class); 
+
+        }
     
 }
 

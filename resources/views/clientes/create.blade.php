@@ -16,12 +16,12 @@
 
         <div class="form_group">
             <label for="Nome">Nome:</label>
-            <input type="text" name ="Nome" required>
+            <input type="text" name ="Nome" required >
         </div>
 
         <div class="form_group">
             <label for="Telefone">Telefone:</label>
-            <input type="text" name ="Telefone" required >
+            <input type="text" name ="Telefone" required maxlength="15">
         </div>
 
 

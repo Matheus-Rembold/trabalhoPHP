@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Agendamento;
 use Illuminate\Http\Request;
+use App\Models\Servico;
+use App\Models\Mecanico;
+use App\Models\Carro;
 
 class AgendamentoController extends Controller
 {
@@ -22,7 +25,11 @@ class AgendamentoController extends Controller
      */
     public function create()
     {
-      return view(view: 'agendamentos.create') ;
+        $servicos = Servico::all(); 
+        $mecanicos = Mecanico::all();
+        $carros = Carro::all();
+
+        return view('agendamentos.create', compact('servicos', 'mecanicos', 'carros'));
     }
 
     /**

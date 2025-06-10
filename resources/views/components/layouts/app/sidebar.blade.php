@@ -23,7 +23,7 @@
                         class="mt-4">
                         
                         <flux:navlist.item
-                            icon="list-bullet"
+                            icon="circle-stack"
                             :href="route('clientes.index')"
                             :current="request()->routeIs('clinetes.index')"
                             wire:navigate
@@ -32,7 +32,7 @@
                         </flux:navlist.item>
 
                         <flux:navlist.item
-                            icon="plus-circle"
+                            icon="plus"
                             :href="route('clientes.create')"
                             :current="request()->routeIs('clientes.create')"
                             
@@ -48,7 +48,7 @@
                         class="mt-4">
                         
                         <flux:navlist.item
-                            icon="list-bullet"
+                            icon="circle-stack"
                             :href="route('mecanicos.index')"
                             :current="request()->routeIs('mecanicos.index')"
                             wire:navigate
@@ -57,7 +57,7 @@
                         </flux:navlist.item>
 
                         <flux:navlist.item
-                            icon="plus-circle"
+                            icon="plus"
                             :href="route('mecanicos.create')"
                             :current="request()->routeIs('mecanicos.create')"
                             
@@ -75,7 +75,7 @@
                         class="mt-4">
                         
                         <flux:navlist.item
-                            icon="list-bullet"
+                            icon="circle-stack"
                             :href="route('carros.index')"
                             :current="request()->routeIs('carros.index')"
                             wire:navigate
@@ -84,7 +84,7 @@
                         </flux:navlist.item>
 
                         <flux:navlist.item
-                            icon="plus-circle"
+                            icon="plus"
                             :href="route('carros.create')"
                             :current="request()->routeIs('carros.create')"
                             
@@ -100,7 +100,7 @@
                         class="mt-4">
                         
                         <flux:navlist.item
-                            icon="list-bullet"
+                            icon="circle-stack"
                             :href="route('servicos.index')"
                             :current="request()->routeIs('servicos.index')"
                             wire:navigate
@@ -109,7 +109,7 @@
                         </flux:navlist.item>
 
                         <flux:navlist.item
-                            icon="plus-circle"
+                            icon="plus"
                             :href="route('servicos.create')"
                             :current="request()->routeIs('servicos.create')"
                             
@@ -125,7 +125,7 @@
                         class="mt-4">
                         
                         <flux:navlist.item
-                            icon="list-bullet"
+                            icon="circle-stack"
                             :href="route('agendamentos.index')"
                             :current="request()->routeIs('agendamentos.index')"
                             wire:navigate
@@ -134,7 +134,7 @@
                         </flux:navlist.item>
 
                         <flux:navlist.item
-                            icon="plus-circle"
+                            icon="plus"
                             :href="route('agendamentos.create')"
                             :current="request()->routeIs('agendamentos.create')"
                             

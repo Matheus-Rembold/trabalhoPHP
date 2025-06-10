@@ -13,20 +13,46 @@
 
 
 
-    
 <div class="form_group">
-    <label for="servicos_id">Serviço ID:</label>
-    <input type="text" name ="servicos_id" required>
+<label for="servicos_id">Serviços</label>
+    <select name="servicos_id" id="disciplina_id" required>
+    <option value="">Selecione...</option>
+        @foreach ($servicos as $servico)
+                <option value="{{ $servico->id }}" {{ $servico->id  ? 'selected' : '' }}>  
+             {{ $servico->Nome }}
+            </option>
+        @endforeach
+                
+    </select>  
 </div>
 
+
 <div class="form_group">
-    <label for="mecanicos_id">Mecanico ID:</label>
-    <input type="text" name ="mecanicos_id" required>
-</div>
-<div class="form_group">
-    <label for="carros_id">Carro ID:</label>
-    <input type="text" name ="carros_id" required>
-</div>
+<label for="mecanicos_id">Mecanico</label>
+    <select name="mecanicos_id" id="disciplina_id" required>
+    <option value="">Selecione...</option>
+        @foreach ($mecanicos as $mecanico)
+                <option value="{{ $mecanico->id }}" {{ $mecanico->id  ? 'selected' : '' }}>  
+             {{ $mecanico->Nome }}
+            </option>
+        @endforeach
+                
+    </select>  
+
+
+    <div class="form_group">
+<label for="carros_id">Carro</label>
+    <select name="carros_id" id="disciplina_id" required>
+    <option value="">Selecione...</option>
+        @foreach ($carros as $carro)
+                <option value="{{ $carro->id }}" {{ $carro->id  ? 'selected' : '' }}>  
+             {{ $carro->Placa }}
+            </option>
+        @endforeach
+                
+    </select>  
+
+
 
 
 

@@ -12,8 +12,16 @@
     @csrf 
 
 <div class="form_group">
-    <label for="clientes_id">CLIENTE ID:</label>
-    <input type="text" name ="clientes_id" required>
+<label for="clientes_id">Cliente</label>
+    <select name="clientes_id" id="disciplina_id" required>
+    <option value="">Selecione...</option>
+        @foreach ($clientes as $cliente)
+                <option value="{{ $cliente->id }}" {{ $cliente->id  ? 'selected' : '' }}>  
+             {{ $cliente->Nome }}
+            </option>
+        @endforeach
+                
+    </select>  
 </div>
 
 

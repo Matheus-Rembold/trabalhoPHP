@@ -1,0 +1,7 @@
+quando vcai crirar novo cliente(todas as tabelmas na real) deve ter limite de campo no table do create
+
+
+
+
+
+

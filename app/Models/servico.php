@@ -9,5 +9,6 @@ class Servico extends Model
     
         protected $table = 'servicos';
         protected $fillable = ['Nome','Descricao','Elevacar'];
+
     
 }

@@ -17,12 +17,13 @@ class ClienteController extends Controller
 
         return view('clientes.index',compact('clientes'));
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
+        
         return view('clientes.create') ;
 
     }
@@ -74,8 +75,8 @@ class ClienteController extends Controller
 
         $data = $request->validate([ 
             'Nome'      => 'required|string|max:255',
-            'Telefone' =>  'required|string|max:255',
-            'CFP'  =>   'required|string|max:255',
+            'Telefone' =>  'required|string|max:11',
+            'CPF'  =>   'required|string|max:255',
             'Endereco' =>  'required|string|max:255'
         ]);
 
