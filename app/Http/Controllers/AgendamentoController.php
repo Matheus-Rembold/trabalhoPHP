@@ -65,8 +65,8 @@ class AgendamentoController extends Controller
      */
     public function edit(string $id)
     {
-        $Agendamento = Agendamento::findOrFail($id);
-        return view('Agendamento.edit', compact('Agendamento'));
+        $agendamento = Agendamento::findOrFail($id);
+        return view('agendamentos.edit', compact('agendamento'));
     }
 
     /**
@@ -74,20 +74,20 @@ class AgendamentoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-          $agendamento = Agendamento::findOrFail($id);
+        $agendamento = Agendamento::findOrFail($id);
         $data = $request->validate([
             'servicos_id'               =>'required|string|max:255|exists:servicos,id',
             'mecanicos_id'               =>'required|string|max:255|exists:mecanicos,id',
             'carros_id'               =>'required|string|max:255|exists:carros,id',
-            'Dia_do_servico'          =>'required|date|max:255',
-            'Tempo_para_aprontar'      =>'required|time|max:255',
+            'Dia_do_servico'          =>'required|string|max:10',
+            'Tempo_para_aprontar'      =>'required|string|max:10',
         ]);
 
         $agendamento->update($data);
 
 
         return redirect()
-            ->route('agendamento.index')
+            ->route('agendamentos.index')
             ->with('success', 'Agendamento atualizado com sucesso!');
     }
 

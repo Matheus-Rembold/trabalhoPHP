@@ -18,6 +18,7 @@
           id="Nome"
           rows="4"
           required
+          maxlength="100"
         >{{ old('Nome', $mecanico->Nome) }}</textarea>
       </div>
 

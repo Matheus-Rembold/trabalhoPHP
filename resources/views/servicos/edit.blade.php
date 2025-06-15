@@ -18,6 +18,7 @@
           id="Nome"
           rows="4"
           required
+          maxlength="50"
         >{{ old('Nome', $servico->Nome) }}</textarea>
       </div>
 
@@ -28,6 +29,7 @@
           id="Descricao"
           rows="4"
           required
+          maxlength="300"
         >{{ old('Descricao', $servico->Descricao) }}</textarea>
       </div>
 
@@ -39,6 +41,7 @@
           id="Elevacar"
           rows="4"
           required
+          maxlength="1"
         >{{ old('Elevacar', $servico->Elevacar) }}</textarea>
       </div>
 

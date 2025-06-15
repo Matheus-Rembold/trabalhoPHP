@@ -27,23 +27,23 @@
 
 <div class="form_group">
     <label for="Nome">Placa:</label>
-    <input type="text" name ="Placa" required>
+    <input type="text" name ="Placa" required maxlength="7">
 </div>
 <div class="form_group">
     <label for="Nome">Marca:</label>
-    <input type="text" name ="Marca" required>
+    <input type="text" name ="Marca" required maxlength="50">
 </div>
 <div class="form_group">
     <label for="Nome">Modelo:</label>
-    <input type="text" name ="Modelo" required>
+    <input type="text" name ="Modelo" required maxlength="50">
 </div>
 <div class="form_group">
     <label for="Nome">Ano:</label>
-    <input type="text" name ="Ano" required>
+    <input type="text" name ="Ano" required maxlength="4">
 </div>
 <div class="form_group">
     <label for="Nome">Motor:</label>
-    <input type="text" name ="Motor" required>
+    <input type="text" name ="Motor" required maxlength="20">
 </div>
 
 

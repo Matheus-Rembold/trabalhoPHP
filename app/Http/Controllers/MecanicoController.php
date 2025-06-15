@@ -33,7 +33,7 @@ class MecanicoController extends Controller
     public function store(Request $request)
     {
          $data = $request->validate([
-            'Nome'               =>'required|string|max:255'
+            'Nome'               =>'required|string|max:100'
         ]);
       
         $mecanico = Mecanico::create($data);
@@ -67,7 +67,7 @@ class MecanicoController extends Controller
          $mecanico = Mecanico::findOrFail($id);
 
         $data = $request->validate([ 
-            'Nome'      => 'required|string|max:255'
+            'Nome'      => 'required|string|max:100'
         
         ]);
 

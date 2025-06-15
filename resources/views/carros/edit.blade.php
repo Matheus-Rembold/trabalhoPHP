@@ -29,6 +29,7 @@
           id="Placa"
           rows="4"
           required
+          maxlength="7"
         >{{ old('Placa', $carro->Placa) }}</textarea>
       </div>
 
@@ -39,6 +40,7 @@
           id="Marca"
           rows="4"
           required
+          maxlength="50"
         >{{ old('Marca', $carro->Marca) }}</textarea>
       </div>
 
@@ -50,6 +52,7 @@
           id="Modelo"
           rows="4"
           required
+          maxlength="50"
         >{{ old('Modelo', $carro->Modelo) }}</textarea>
       </div>
 
@@ -60,6 +63,7 @@
           id="Ano"
           rows="4"
           required
+          maxlength="4"
         >{{ old('Ano', $carro->Ano) }}</textarea>
       </div>
 
@@ -71,6 +75,7 @@
           id="Motor"
           rows="4"
           required
+          maxlength="20"
         >{{ old('Motor', $carro->Motor) }}</textarea>
       </div>
 

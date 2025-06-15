@@ -36,11 +36,11 @@ class CarroController extends Controller
 
        $data = $request->validate([
             'clientes_id'     =>'required|string|max:255|exists:clientes,id',
-            'Placa'           =>'required|string|max:255',
-            'Marca'           =>'required|string|max:255',
-            'Modelo'          =>'required|string|max:255',
-            'Ano'             =>'required|string|max:255',
-            'Motor'           =>'required|string|max:255',
+            'Placa'           =>'required|string|max:7',
+            'Marca'           =>'required|string|max:50',
+            'Modelo'          =>'required|string|max:50',
+            'Ano'             =>'required|string|max:4',
+            'Motor'           =>'required|string|max:20',
         ]);
       
         $carro = Carro::create($data);

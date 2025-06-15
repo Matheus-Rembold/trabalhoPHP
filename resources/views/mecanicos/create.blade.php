@@ -14,7 +14,7 @@
 
 <div class="form_group">
     <label for="Nome">Nome:</label>
-    <input type="text" name ="Nome" required>
+    <input type="text" name ="Nome" required maxlength="100">
 </div>
 
 <button type ="submit">Salvar</button>

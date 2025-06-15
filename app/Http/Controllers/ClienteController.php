@@ -34,10 +34,10 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $data = $request->validate([
-            'Nome'               =>'required|string|max:255',
-            'Telefone'           =>'required|string|max:255',
-            'CPF'                =>'required|string|max:255',
-            'Endereco'           =>'required|string|max:255',
+            'Nome'               =>'required|string|max:100',
+            'Telefone'           =>'required|string|max:15',
+            'CPF'                =>'required|string|max:11',
+            'Endereco'           =>'required|string|max:100',
         ]);
       
         $cliente = Cliente::create($data);
@@ -74,10 +74,10 @@ class ClienteController extends Controller
         $cliente = Cliente::findOrFail($id);
 
         $data = $request->validate([ 
-            'Nome'      => 'required|string|max:255',
-            'Telefone' =>  'required|string|max:11',
-            'CPF'  =>   'required|string|max:255',
-            'Endereco' =>  'required|string|max:255'
+            'Nome'      => 'required|string|max:100',
+            'Telefone' =>  'required|string|max:15',
+            'CPF'  =>   'required|string|max:11',
+            'Endereco' =>  'required|string|max:100'
         ]);
 
         $cliente->update($data);

@@ -33,9 +33,9 @@ class ServicoController extends Controller
 
       
         $data = $request->validate([
-            'Nome'           =>'required|string|max:255',
-            'Descricao'      =>'required|string|max:255',
-            'Elevacar'       =>'required|string|max:255',
+            'Nome'           =>'required|string|max:50',
+            'Descricao'      =>'required|string|max:300',
+            'Elevacar'       =>'required|string|max:1',
           
         ]);
       
@@ -69,9 +69,9 @@ class ServicoController extends Controller
     {
          $servico = Servico::findOrFail($id);
         $data = $request->validate([
-            'Nome'           =>'required|string|max:255',
-            'Descricao'      =>'required|string|max:255',
-            'Elevacar'       =>'required|string|max:255',
+            'Nome'           =>'required|string|max:50',
+            'Descricao'      =>'required|string|max:300',
+            'Elevacar'       =>'required|string|max:1',
           
         ]);
 

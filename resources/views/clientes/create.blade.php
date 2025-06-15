@@ -16,7 +16,7 @@
 
         <div class="form_group">
             <label for="Nome">Nome:</label>
-            <input type="text" name ="Nome" required >
+            <input type="text" name ="Nome" required maxlength="100" >
         </div>
 
         <div class="form_group">
@@ -27,12 +27,12 @@
 
         <div class="form_group">
             <label for="CPF">CPF:</label>
-            <input type="text" name ="CPF"  required>
+            <input type="text" name ="CPF"  required maxlength="11">
         </div>
 
         <div class="form_group">
             <label for="Endereco">Endereço:</label>
-            <input type="text" name ="Endereco" required >
+            <input type="text" name ="Endereco" required maxlength="100" >
         </div>
         
         <button type ="submit" >Salvar</button>

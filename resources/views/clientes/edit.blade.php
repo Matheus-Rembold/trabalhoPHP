@@ -20,6 +20,7 @@
           id="Nome"
           rows="4"
         required
+        maxlength="100"
         >{{ old('Nome', $cliente->Nome) }}</textarea>
       </div>
 
@@ -31,6 +32,7 @@
           id="Telefone"
           rows="4"
           required
+          maxlength="15"
         >{{ old('Telefone', $cliente->Telefone) }}</textarea>
       </div>
 
@@ -41,6 +43,7 @@
           id="CPF"
           rows="4"
           required
+          maxlength="11"
         >{{ old('CPF', $cliente->CPF) }}</textarea>
       </div>
 
@@ -52,6 +55,7 @@
           id="Endereco"
           rows="4"
           required
+          maxlength="100"
         >{{ old('Endereco', $cliente->Endereco) }}</textarea>
       </div>
 

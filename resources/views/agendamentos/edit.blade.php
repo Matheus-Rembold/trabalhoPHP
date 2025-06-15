@@ -50,6 +50,7 @@
           id="Dia_do_servico"
           rows="4"
           required
+          maxlength="10"
         >{{ old('Dia_do_servico', $agendamento->Dia_do_servico) }}</textarea>
       </div>
 
@@ -60,6 +61,7 @@
           id="Tempo_para_aprontar"
           rows="4"
           required
+          maxlength="10"
         >{{ old('Tempo_para_aprontar', $agendamento->Tempo_para_aprontar) }}</textarea>
       </div>
 

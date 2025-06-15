@@ -13,17 +13,17 @@
 
 <div class="form_group">
     <label for="Nome">Nome:</label>
-    <input type="text" name ="Nome" required>
+    <input type="text" name ="Nome" required maxlength="50">
 </div>
 
 
 <div class="form_group">
     <label for="Descricao">Descrição:</label>
-    <input type="text" name ="Descricao" required>
+    <input type="text" name ="Descricao" required maxlength="300">
 </div>
 <div class="form_group">
     <label for="Elevacar">Elevacar:</label>
-    <input type="text" name ="Elevacar" required>
+    <input type="text" name ="Elevacar" required maxlength="1">
 </div>
 
 

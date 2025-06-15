@@ -59,11 +59,11 @@
 
 <div class="form_group">
     <label for="Dia_do_servico">Dia do serviço:</label>
-    <input type="text" name ="Dia_do_servico" required>
+    <input type="text" name ="Dia_do_servico" required maxlength="10">
 </div>
 <div class="form_group">
     <label for="Tempo_para_aprontar">Tempo para aprontar:</label>
-    <input type="text" name ="Tempo_para_aprontar" required>
+    <input type="text" name ="Tempo_para_aprontar" required maxlength="10">
 </div>
 
 
